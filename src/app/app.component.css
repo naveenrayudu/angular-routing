@@ -1,0 +1,10 @@
+.active{
+  background: lightgray;
+}
+
+
+.navbar-default .navbar-nav > li > a.active:hover,
+.navbar-default .navbar-nav > li > a.active:focus {
+  color: #333;
+  background: lightgray;
+}

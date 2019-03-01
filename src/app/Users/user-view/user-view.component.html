@@ -1,0 +1,20 @@
+<ng-container *ngIf="user">
+
+
+  <div style="width:300px; margin:auto">
+    <dl class="dl-horizontal">
+      <dt>UserName</dt>
+      <dd>{{user.email}}</dd>
+      <dt>Full Name</dt>
+      <dd>{{user.fullname}}</dd>
+      <dt>Age</dt>
+      <dd>{{user.age}}</dd>
+    </dl>
+
+    <button *ngIf="user.id > 1" style="float: left" class="btn btn-default btn-sm"
+       (click)="navigateToUser(user.id-1)">Previous</button>
+    <button  *ngIf="user.id < count" style="float: right" class="btn btn-default btn-sm"
+      (click)="navigateToUser(user.id+1)">Next</button>
+  </div>
+
+</ng-container>

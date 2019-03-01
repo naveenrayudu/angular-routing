@@ -1,0 +1,19 @@
+<ng-container *ngIf="users.length > 0">
+  <ul class="list-group row" *ngFor="let user of users">
+    <li class="list-group-item">
+      <span style="width: 200px;display: inline-block">
+          {{user.email}}
+      </span>
+
+      <span>
+        {{user.fullname}}
+      </span>
+
+      <div style="float: right">
+          <button class="btn btn-md btn-primary" [routerLink]="['/users', 'view']" [queryParams]="{id: user.id }">View</button>
+          <button class="btn btn-md btn-default" [routerLink]="['/users', 'edit']" [queryParams]="{id: user.id }">Edit</button>
+      </div>
+
+    </li>
+  </ul>
+</ng-container>
